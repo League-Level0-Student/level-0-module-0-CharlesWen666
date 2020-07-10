@@ -27,8 +27,11 @@ text("What is going on?",50,50);
 void draw() {
 
   // 7. Write the messsage "IT WORKED FIRST TIME" at the bottom of the meme
-
-  
+if (mousePressed){
+fill(#F5EE19);
+text("oh my god!", 100,460);
+}
+else 
   // 8. Change the color of the text. Use the fill() command for this
   //    Put it BEFORE you write the text!
   
