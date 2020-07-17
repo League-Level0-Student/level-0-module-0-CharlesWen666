@@ -12,21 +12,25 @@ public class PentagonCrazy {
 	private void drawPattern() {
 		
 		//  Create a new Robot
-
+		Robot cw = new Robot();
 		//  Put the robot's pen down
-
+		cw.penDown();
 		//  SPEED. Make the robot go at maximum speed (100)
-
+		cw.setSpeed(100);
 		//  COLOR. Set the pen to a color that you like for the shape
-
+		cw.setPenColor(Color.pink);
 		//  NUMBER OF SIDES. Make an int variable for the number of sides the shape has.
 		//  				(Hint: its called PentagonCrazy)
-
+		int sides=5;
 		//  TURN ANGLE. Make another int variable for the angle you want the robot to turn. 
 		//  			Hint: Divide 360 by the number of sides the shape has.
-
+		int angle=360/sides;
 		//  LOOP. Use a for loop to repeat ALL the following lines of code 200 times. 
-		
+		cw.hide();
+		for (int i = 0; i <999999; i++) {
+			cw.move(i);
+			cw.turn(angle+1);
+		} 
 				//  DRAW.  Make the robot move "i" pixels
 				//         "i" is the variable in the for loop
 		

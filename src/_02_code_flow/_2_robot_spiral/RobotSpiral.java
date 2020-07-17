@@ -16,7 +16,7 @@ public class RobotSpiral {
 		// Set your robot's pen down 
 	cw.penDown();
 		// SPEED. Set the robot to go at max speed (100)
-		cw.setSpeed(100);
+		cw.setSpeed(200);
         // LOOP. Use a for loop to repeat ALL the following lines of code 50 times. 
 		for(int i=0; i<50; i++) {
 				// Change the robot pen color to random
@@ -25,7 +25,7 @@ public class RobotSpiral {
 				//          "i" is the variable in the for loop	
 			cw.move(5*i);
 				// TURN.    Turn the robot (360/7) degrees to the right
-			cw.turn(360/7);
+			cw.turn(60);
 				// Change the robot pen width to (i)
 cw.setPenWidth(i);
 		
