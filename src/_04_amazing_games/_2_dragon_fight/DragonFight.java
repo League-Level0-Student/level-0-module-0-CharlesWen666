@@ -80,6 +80,7 @@ public class DragonFight {
 			// 10.  Pop up a message that tells the player the health levels of player and
 			// 		dragon.
 		
+		
 		JOptionPane.showMessageDialog(null, "Your health:"+ph  +"\n Gragon's health:"+gh +"\n Your damage:"+ps + "\n Gragon's damage:" + gs);
 			// (Bonus: Also display the amount of health that was lost by each in this
 			// round)
