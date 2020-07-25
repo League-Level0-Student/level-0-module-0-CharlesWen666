@@ -86,6 +86,7 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 			
 			if(mouseColor==-8978685) {
 				JOptionPane.showMessageDialog(null, "You Win!!!");
+				
 			}
 			
 		}	
