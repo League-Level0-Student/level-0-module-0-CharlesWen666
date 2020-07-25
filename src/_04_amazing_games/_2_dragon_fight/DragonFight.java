@@ -14,16 +14,17 @@ public class DragonFight {
 		JOptionPane.showMessageDialog(null, "Defeat the dragon to take its treasure!", "Dragon Fighter", 0, dragon);
 
 		// 1. Create some variables to hold health levels
-		
+		int ph=100;
+		int gh=100;
 			// playerHealth to store your health - set it equal to 100
 	
 			// dragonHealth to store the dragon's health - set it equal to 100
 
 		// 2. Create some variables to hold the attack strengths. These will be given different values later. 
-		
+		int ps = 0;
+		int gs = 0;
 			// playerAttack to store the damage the player's attack will do - set it equal
 			// to 0 for now.
-	
 			// dragonAttack to store the damage the dragon's attack will do - set it equal
 			// to 0 for now.
 
@@ -35,57 +36,68 @@ public class DragonFight {
 
 				// 3. Ask the player in a pop-up if they want to attack the dragon with a yell
 				// or a kick
-	
+			String pf = JOptionPane.showInputDialog("yell or kick");
 				// 4. If they typed in "yell":
-	
+			if(pf.equalsIgnoreCase("yell")) {
+				ps = ran.nextInt(10);
+				gh = gh-ps;
+			}
 					// -- Find a random number between 0 and 10 and store it in playerAttack. Use
 					// ran.nextInt(10)
 		
 					// -- Subtract the player attack value from the dragon's health
 	
 				// 5. If they typed in "kick":
-	
+			
+		if(pf.equalsIgnoreCase("kick")) {
+			ps = ran.nextInt(25);
+			gh = gh-ps;
+		}
 					// -- Find a random number between 0 and 25 and store it in playerAttack.
 		
 					// -- Subtract the player attack value from the dragon's health
 
 			// THE DRAGON RETALIATES
-
+		
 				// 6. Find a random number between 0 and 35 and store it in dragonAttack
-	
+		gs=ran.nextInt(35);
 				// 7. Subtract the dragon attack value from the player's health
-
+		ph = ph-gs;
 			// ASSESS THE DAMAGE CAUSED 
-
+		
 				// 8. If the player's health is less than or equal to 0
 				// call the playerLost() method
-	
+		if(ph<=0) {
+			playerLost();
+		}
 			
 				// 9. Else if the dragon's health is less than or equal to 0
 				// call the dragonLost() method
-
+		if(gh<=0) {
+			dragonLost();
+		}
 			
 			// 10.  Pop up a message that tells the player the health levels of player and
 			// 		dragon.
-
-			
+		
+		JOptionPane.showMessageDialog(null, "Your health:"+ph  +"\n Gragon's health:"+gh +"\n Your damage:"+ps + "\n Gragon's damage:" + gs);
 			// (Bonus: Also display the amount of health that was lost by each in this
 			// round)
-
+		
 		}
 
 	}
 
 	static void playerLost() {
 		// 11. Tell the player that they have been defeated by the dragon and have no treasure
-
+		JOptionPane.showMessageDialog(null, "You have been defeated by the dragon and have no treasure");
 
 		System.exit(0);   //This code ends the program
 	}
 
 	static void dragonLost() {
 		// 12. Tell the user that the dragon has been defeated and they get a ton of gold!
-
+		JOptionPane.showMessageDialog(null, "The dragon has been defeated and you get a ton of gold");
 		System.exit(0);   //This code ends the program
 	}
 
